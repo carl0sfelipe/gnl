@@ -18,21 +18,21 @@ Copie os arquivos get_next_line.c, get_next_line.h, e get_next_line_utils.c para
 
 No arquivo .c onde você deseja usar a função Get Next Line, inclua o cabeçalho da seguinte forma:
 
-c
-Copy code
 #include "get_next_line.h"
+
 Compile seu projeto juntamente com os arquivos da função Get Next Line. Por exemplo:
+
 bash
-Copy code
+
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 seu_arquivo.c get_next_line.c get_next_line_utils.c -o seu_programa
+
 ⚠️ Atenção: Certifique-se de definir o BUFFER_SIZE ao compilar o projeto. O valor pode ser ajustado de acordo com suas necessidades e restrições de desempenho. Recomenda-se usar potências de 2, como 32, 64 ou 128.
 
 📖 Uso
 A função Get Next Line possui a seguinte assinatura:
 
-c
-Copy code
 int get_next_line(int fd, char **line);
+
 fd: O descritor de arquivo a partir do qual a linha deve ser lida. Pode ser um arquivo aberto ou 0 para a entrada padrão (stdin).
 line: Um ponteiro para uma string onde a linha lida será armazenada.
 A função retorna:
@@ -42,12 +42,12 @@ A função retorna:
 -1 em caso de erro
 Exemplo de uso:
 
-c
-Copy code
+
+´´´
 #include "get_next_line.h"
 #include <fcntl.h>
 #include <stdio.h>
-´´´
+
 int main(int argc, char **argv)
 {
     int fd;
@@ -64,4 +64,5 @@ int main(int argc, char **argv)
         close(fd);
     }
     return (0);
-}´´´
+}
+´´´
