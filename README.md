@@ -1,4 +1,3 @@
-Get Next Line (GNL)
 Get Next Line (GNL) é um projeto da École 42 que visa criar uma função em C para ler linhas de texto de um arquivo, um descritor de arquivo ou a entrada padrão (stdin), até encontrar uma quebra de linha (\n) ou o final do arquivo. Essa função é uma ferramenta valiosa para a manipulação de arquivos e streams de dados em projetos futuros.
 
 🚀 Funcionalidades
